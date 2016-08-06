@@ -23,11 +23,12 @@ public class ManageServlet extends HttpServlet {
 			throws ServletException, IOException {
 			
 		String op=request.getParameter("op");
+		
 		if("checkCategory".equals(op)){
 			checkCategory(request,response);
 		}else if("addCategory".equals(op)){
 			addCategory(request,response);
-		}else if("listCategories".equals(op)){
+		}else if("listCategories".equals(op)){//查询分类
 			listCategories(request,response);
 		}else if("addBookUI".equals(op)){
 			addBookUI(request,response);
